@@ -2,27 +2,43 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: Scaffold(
+    home: HomeSateful(),
+  ));
+}
+
+class HomeSateful extends StatefulWidget {
+  const HomeSateful({Key? key}) : super(key: key);
+
+  @override
+  State<HomeSateful> createState() => _HomeSatefulState();
+}
+
+class _HomeSatefulState extends State<HomeSateful> {
+  var _texto = "Thiago Pereira";
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
       appBar: AppBar(
-        title: Text("instagrm"),
+        title: Text("Instagram"),
         backgroundColor: Colors.green,
       ),
-      body: Padding(
-        padding: EdgeInsets.all(16),
-        child: Text("Contudo principal"),
-        ),
-      bottomNavigationBar: BottomAppBar(
-        color: Colors.lightGreen,
-        child: Padding(
-          padding: EdgeInsets.all(16),
-          child: Row(
-            children: [
-              Text("Text 1"),
-              Text("Text 1"),
-            ]
+      body: Container(
+        child: Column(
+          children: [
+            ElevatedButton(
+              onPressed: () {
+                setState(() {
+                  _texto = "Curso flutter";
+                });
+              },
+              style: ElevatedButton.styleFrom(primary: Colors.amber),
+              child: Text("Clique aqui"),
             ),
-          ),
+            Text("Nome: $_texto")
+          ],
+        ),
       ),
-    ),
-  ));
+    );
+  }
 }
