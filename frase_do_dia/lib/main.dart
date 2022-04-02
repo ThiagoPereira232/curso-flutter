@@ -7,19 +7,18 @@ void main() {
       color: Colors.white,
       child: Column(
         children: [
-          Text(
-            "Lorem ipsum ",
-            style: TextStyle(
-              fontSize: 35,
-              fontStyle: FontStyle.normal,
-              fontWeight: FontWeight.normal,
-              letterSpacing: 0,
-              wordSpacing: 0,
-              decoration: TextDecoration.underline,
-              decorationColor: Colors.greenAccent,
-              decorationStyle: TextDecorationStyle.solid,
-              color: Colors.black,
-            ),
+          TextButton(
+            onPressed: (){
+              print("Botão pressionado!");
+            }, 
+            child: Text(
+              "Clica aqui",
+              style: TextStyle(
+                fontSize: 20,
+                color: Colors.black,
+                decoration: TextDecoration.none
+              )
+              )
             )
         ])
       ,),
