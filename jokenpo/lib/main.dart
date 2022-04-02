@@ -3,6 +3,7 @@ import 'Jogo.dart';
 
 void main(){
   runApp(MaterialApp(
-    home: Jogo()
+    home: Jogo(),
+    debugShowCheckedModeBanner: false,
   ));
 }
