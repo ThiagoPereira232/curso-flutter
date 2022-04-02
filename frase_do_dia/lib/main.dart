@@ -2,16 +2,27 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(MaterialApp(
-    title: "Frases do dia",
-    home: Container(
-      margin: EdgeInsets.only(top:40),
-      decoration: BoxDecoration(
-        border: Border.all(width: 3, color: Colors.red)
+    home: Scaffold(
+      appBar: AppBar(
+        title: Text("instagrm"),
+        backgroundColor: Colors.green,
       ),
-      child: Image.asset(
-        "images/parque.jpg",
-        fit: BoxFit.scaleDown,
-      )
+      body: Padding(
+        padding: EdgeInsets.all(16),
+        child: Text("Contudo principal"),
+        ),
+      bottomNavigationBar: BottomAppBar(
+        color: Colors.lightGreen,
+        child: Padding(
+          padding: EdgeInsets.all(16),
+          child: Row(
+            children: [
+              Text("Text 1"),
+              Text("Text 1"),
+            ]
+            ),
+          ),
+      ),
     ),
   ));
 }
