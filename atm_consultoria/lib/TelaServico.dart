@@ -10,6 +10,52 @@ class TelaServico extends StatefulWidget {
 class _TelaServicoState extends State<TelaServico> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        title: const Text("Serviço"),
+        backgroundColor: Colors.green,
+      ),
+      body: SingleChildScrollView(
+        child: Container(
+          padding: EdgeInsets.all(16),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  Image.asset("images/detalhe_servico.png"),
+                  const Padding(
+                    padding: EdgeInsets.only(left: 10),
+                    child: Text(
+                      "Nossos serviços",
+                      style: TextStyle(
+                        fontSize: 20,
+                      ),
+                    )
+                  )
+                ]
+              ),
+              const Padding(
+                padding: EdgeInsets.only(top: 16),
+                child: Text(
+                  "Consultoria"
+                )
+              ),const Padding(
+                padding: EdgeInsets.only(top: 16),
+                child: Text(
+                  "Calculo de preços"
+                )
+              ),const Padding(
+                padding: EdgeInsets.only(top: 16),
+                child: Text(
+                  "Acompanhamento de projetos"
+                )
+              )
+            ],
+          )
+        ),
+      )
+    );
   }
 }
