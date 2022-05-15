@@ -8,25 +8,24 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-
   void _exibirResultado() {}
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xff61bd86),
-      // backgroundColor: Color.fromRGBO(255, 204, 12, 1),
-      body: Container(
+      //backgroundColor: Color.fromRGBO(255, 204, 128, 1),
+      body: Center(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
           mainAxisAlignment: MainAxisAlignment.center,
-          children: [
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
             Image.asset("images/logo.png"),
             GestureDetector(
               onTap: _exibirResultado,
-              child: Image.asset("images/botao_jogar.png"),               
+              child: Image.asset("images/botao_jogar.png"),
             )
-          ]
+          ],
         ),
       ),
     );
